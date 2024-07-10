@@ -249,6 +249,7 @@ export class NodeLoader{
 				'content-type': 'multipart/byteranges',
 				'Range': `bytes=${first}-${last}`,
 			},
+			credentials: 'include',
 		});
 
 		let buffer = await response.arrayBuffer();
